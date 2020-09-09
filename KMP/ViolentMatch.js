@@ -3,28 +3,27 @@
  * @Autor: GideonSenku
  * @Date: 2020-09-08 19:22:00
  * @LastEditors: GideonSenku
- * @LastEditTime: 2020-09-08 19:38:19
+ * @LastEditTime: 2020-09-09 10:42:20
  */
-const str = 'hello,world'
-const p = 'hello1'
 
-console.log(ViolentMatch(str, p));
+const str = 'hello,world'
+const p = 'hello'
+
+console.log(ViolentMatch(str.split(''), p.split('')));
 
 
 
 function ViolentMatch(s, p) {
-  const sarr = s.split('')
-  const parr = p.split('')
   let i = 0
   let j = 0
   while (i < s.length && j < p.length) {
-    if (sarr[i] == parr[j]) {
+    if (s[i] == p[j]) {
       i++
       j++
     } else {
       i = i - j + 1
-      i = 0
+      j = 0
     }
   }
-  return i == j ? true : false
+  return i == j ? i - j : false
 }
