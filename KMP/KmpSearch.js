@@ -3,7 +3,7 @@
  * @Autor: GideonSenku
  * @Date: 2020-09-09 10:35:27
  * @LastEditors: GideonSenku
- * @LastEditTime: 2020-09-09 11:01:32
+ * @LastEditTime: 2020-09-09 18:28:49
  */
 
 const { getNext } = require('./getNext')
@@ -11,9 +11,9 @@ const { getNext } = require('./getNext')
 const str = 'BBC ABCDAB ABCDABCDABDE'
 const ptr = 'ABCDABD'
 let next = []
-getNext(ptr.split(''), next)
+getNext(ptr, next)
 
-console.log(KmpSearch(str.split(''), ptr.split('')))
+console.log(KmpSearch(str, ptr))
 
 function KmpSearch(s, p) {
   let i = 0

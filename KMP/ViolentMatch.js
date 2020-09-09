@@ -3,15 +3,13 @@
  * @Autor: GideonSenku
  * @Date: 2020-09-08 19:22:00
  * @LastEditors: GideonSenku
- * @LastEditTime: 2020-09-09 10:42:20
+ * @LastEditTime: 2020-09-09 18:31:36
  */
 
 const str = 'hello,world'
-const p = 'hello'
+const p = 'world'
 
-console.log(ViolentMatch(str.split(''), p.split('')));
-
-
+console.log(ViolentMatch(str, p));
 
 function ViolentMatch(s, p) {
   let i = 0
@@ -25,5 +23,5 @@ function ViolentMatch(s, p) {
       j = 0
     }
   }
-  return i == j ? i - j : false
+  return j == p.length ? i - j : false
 }
